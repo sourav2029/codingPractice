@@ -6,7 +6,8 @@ import java.util.List;
 import java.util.Queue;
 
 public class NaryLevelOrderTraversal {
-    public static class Node {
+    // Definition for a Node.
+    class Node {
         public int val;
         public List<Node> children;
 
@@ -23,13 +24,15 @@ public class NaryLevelOrderTraversal {
         }
     }
 
+    ;
+
     List<List<Integer>> ans;
 
     public List<List<Integer>> levelOrder(Node root) {
+        ans = new ArrayList<>();
         if (root == null) {
             return ans;
         }
-        ans = new ArrayList<>();
         bfs(root);
         return ans;
     }
@@ -52,16 +55,19 @@ public class NaryLevelOrderTraversal {
         while (!q.isEmpty()) {
             Pair pair = q.poll();
             int currLevel = pair.level;
-            res.add(pair.node.val);
-            for (Node node : pair.node.children) {
-                q.add(new Pair(currLevel + 1, node));
-            }
             if (currLevel > prevLevel) {
                 ans.add(res);
                 res = new ArrayList<>();
                 prevLevel = currLevel;
             }
-
+            res.add(pair.node.val);
+            for (Node node : pair.node.children) {
+                q.add(new Pair(currLevel + 1, node));
+            }
         }
+        if (res.size() > 0) {
+            ans.add(res);
+        }
+
     }
 }
