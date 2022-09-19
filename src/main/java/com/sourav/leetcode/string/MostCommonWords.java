@@ -1,4 +1,4 @@
-package com.sourav;
+package com.sourav.leetcode.string;
 
 import java.util.HashMap;
 import java.util.Map;

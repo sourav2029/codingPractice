@@ -6,7 +6,7 @@ import java.util.concurrent.Executors;
 public class SingleThreadedExecutorExample {
     public static void main(String[] args) {
         ExecutorService service = Executors.newSingleThreadExecutor();
-        for (int i = 0; i < 10000; i++) {
+        for (int i = 0; i < 100; i++) {
             service.execute(new Task(i));
         }
         System.out.println("Thread Name :" + Thread.currentThread().getName());

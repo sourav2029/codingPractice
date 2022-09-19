@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CourseSchedule2 {
+    boolean ans = true;
     public int[] findOrder(int numCourses, int[][] prerequisites) {
         List<Integer>[] graph = new List[numCourses];
         for (int i=0; i<numCourses; i++){
@@ -13,10 +14,10 @@ public class CourseSchedule2 {
             graph[edge[0]].add(edge[1]);
         }
         List<Integer> res = new ArrayList<>();
-        boolean[] visited = new boolean[numCourses];
+        int[] color = new int[numCourses];
         for (int i=0; i<numCourses; i++){
-            if (!visited[i]){
-                dfs(graph, visited, res, i);
+            if (color[i] == 0){
+                dfs(graph, color, res, i);
             }
         }
         int[] ans = new int[res.size()];
@@ -26,13 +27,18 @@ public class CourseSchedule2 {
         return ans;
     }
 
-    public static void dfs(List<Integer>[] graph, boolean[] visited, List<Integer> res, int v){
-        visited[v] = true;
+    public void dfs(List<Integer>[] graph, int[] color, List<Integer> res, int v){
+        color[v] = 1;
         for(int u: graph[v]){
-            if(!visited[u]){
-                dfs(graph, visited, res, u);
+            if (color[u] == 1){
+                ans = false;
+                return;
+            }
+            if (color[u] == 0){
+                dfs(graph, color, res, u);
             }
         }
+        color[v] = 2;
         res.add(v);
     }
 

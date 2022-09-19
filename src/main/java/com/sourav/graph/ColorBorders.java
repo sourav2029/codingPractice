@@ -1,5 +1,5 @@
 package com.sourav.graph;
-
+//https://leetcode.com/problems/coloring-a-border/
 public class ColorBorders {
     static int[] rows = {1, 0, -1, 0};
     static int[] cols = {0, 1, 0, -1};
@@ -16,22 +16,30 @@ public class ColorBorders {
 
     public static void dfs(int row, int col, int[][] grid, int color) {
         visited[row][col] = true;
-        System.out.println(row + "," + col);
-        for (int k = 0; k < 4; k++) {
-            int x = row + rows[k];
-            int y = col + cols[k];
+        int count = 0;
+        for(int k=0; k<4;k++){
+            int x = row+rows[k];
+            int y = col+cols[k];
 
-            if (x >= 0 && y >= 0 && x < m && y < n && !visited[x][y] && grid[row][col] == grid[x][y]) {
-                System.out.println(row + "," + col);
-                dfs(x, y, grid, color);
+            if (x>= 0 && y>=0 && x<m && y<n){
+                if(grid[row][col] == grid[x][y]){
+                    count++;
+                    if(!visited[x][y]){
+                        dfs(x,y,grid,color);
+                    }
+                } else if (visited[x][y] && grid[x][y] == color){
+                    count++;
+                }
             }
         }
-        grid[row][col] = color;
+        if (count != 4){
+            grid[row][col] = color;
+        }
     }
 
     public static void main(String[] args) {
-        int[][] grid = {{1,2,2},{2,3,2}};
-        int row = 0, col = 1, color = 3;
+        int[][] grid = {{1,1,1},{1,1,1}, {1,1,1}};
+        int row = 1, col = 1, color = 2;
         colorBorder(grid, row, col, color);
     }
 }

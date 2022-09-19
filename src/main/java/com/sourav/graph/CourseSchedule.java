@@ -1,4 +1,4 @@
-package com.sourav.unionfind;
+package com.sourav.graph;
 
 import java.util.ArrayList;
 import java.util.List;
