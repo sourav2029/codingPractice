@@ -1,7 +1,5 @@
 package com.sourav.cses;
 
-import sun.lwawt.macosx.CSystemTray;
-
 import java.io.*;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
