@@ -4,6 +4,7 @@ import java.util.Random;
 import java.util.Stack;
 
 // push , pop, peek, isEmpty are all o(1) operations.
+// LAst In First out DS
 public class StackExample {
 
     public static void main(String[] args) {

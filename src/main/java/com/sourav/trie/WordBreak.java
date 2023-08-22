@@ -83,11 +83,12 @@ public class WordBreak {
 
     public static void main(String[] args) {
         List<String> wordDict = new ArrayList<>();
+        System.out.println("happy".substring(0));
         Map<String, Boolean> isPresent = new HashMap<>();
         wordDict.add("word");
         wordDict.add("w");
         wordDict.add("wo");
-//        System.out.println(wordBreakBruteForce("wordword", wordDict, isPresent));
+        System.out.println(wordBreakBruteForce("wordword", wordDict, isPresent));
         System.out.println(wordBreakWithMap("wordword", isPresent));
     }
 }
