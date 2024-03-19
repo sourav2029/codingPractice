@@ -1,4 +1,4 @@
-package com.sourav.graph.dijkstras;
+package com.sourav.graph.shortestPath;
 
 public class Pair implements Comparable<Pair> {
     int first;

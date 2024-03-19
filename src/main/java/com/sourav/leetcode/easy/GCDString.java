@@ -1,4 +1,4 @@
-package com.sourav.leetcode.easy.easy;
+package com.sourav.leetcode.easy;
 
 public class GCDString {
     public static String gcdOfStrings(String str1, String str2) {

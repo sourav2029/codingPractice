@@ -1,4 +1,4 @@
-package com.sourav.leetcode.easy.easy.tree;
+package com.sourav.leetcode.easy.tree;
 
 
 import java.util.List;

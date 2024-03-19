@@ -1,4 +1,4 @@
-package com.sourav.leetcode.easy.easy;
+package com.sourav.leetcode.easy;
 
 public class IncreasingTriplet {
     public boolean increasingTriplet(int[] nums) {

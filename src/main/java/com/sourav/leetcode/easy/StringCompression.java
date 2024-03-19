@@ -1,4 +1,4 @@
-package com.sourav.leetcode.easy.easy;
+package com.sourav.leetcode.easy;
 
 public class StringCompression {
     public static int compress(char[] chars) {

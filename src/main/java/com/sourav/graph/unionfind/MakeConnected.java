@@ -1,4 +1,4 @@
-package com.sourav.unionfind;
+package com.sourav.graph.unionfind;
 
 //https://leetcode.com/problems/number-of-operations-to-make-network-connected/
 public class MakeConnected {

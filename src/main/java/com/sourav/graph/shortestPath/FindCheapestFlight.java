@@ -1,4 +1,4 @@
-package com.sourav.graph.dijkstras;
+package com.sourav.graph.shortestPath;
 
 import java.util.*;
 
@@ -63,11 +63,49 @@ public class FindCheapestFlight {
         return dist[dst] == Integer.MAX_VALUE ? -1 : dist[dst];
     }
 
+    //    Dijakstra Algorithm
+    public  int findCheapestPrice3(int n, int[][] flights, int src, int dst, int k) {
+        List<Pair>[] graph = createGraph(n,flights);
+        int[] stops = new int[n];
+        Arrays.fill(stops, Integer.MAX_VALUE);
+        PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a[0]));
+        pq.offer(new int[]{0, src, 0});
+        while (!pq.isEmpty()){
+            int[] temp = pq.poll();
+            int dist = temp[0];
+            int node = temp[1];
+            int steps = temp[2];
+            if(steps > stops[node] | steps > k+1){
+             continue;
+            }
+            stops[node] = steps;
+            if(node == dst){
+                return dist;
+            }
+            for(Pair p : graph[node]){
+                pq.offer(new int[]{dist + p.second, p.first, steps+1});
+            }
+        }
+        return -1;
+    }
+
+
+    public List<Pair>[] createGraph(int n, int[][] edges) {
+        List<Pair>[] g = new List[n];
+        for (int i = 0; i < n; i++) {
+            g[i] = new ArrayList<>();
+        }
+        for (int[] edge : edges) {
+            g[edge[0]].add(new Pair(edge[1], edge[2]));
+        }
+        return g;
+    }
+
     public static void main(String[] args) {
         System.out.println(findCheapestPrice(4, new int[][]{{0, 1, 1}, {0, 2, 5}, {1, 2, 1}, {2, 3, 1}}, 0, 3, 1));
         System.out.println(findCheapestPrice2(4, new int[][]{{0, 1, 1}, {0, 2, 5}, {1, 2, 1}, {2, 3, 1}}, 0, 3, 1));
 //        [[4,1,1],[1,2,3],[0,3,2],[0,4,10],[3,1,1],[1,4,3]]
-        System.out.println(findCheapestPrice(5, new int[][]{{4,1,1},{1,2,3},{0,3,2},{0,4,10},{3,1,1},{1,4,3}}, 2, 1, 1));
-        System.out.println(findCheapestPrice2(5, new int[][]{{4,1,1},{1,2,3},{0,3,2},{0,4,10},{3,1,1},{1,4,3}}, 2, 1, 1));
+        System.out.println(findCheapestPrice(5, new int[][]{{4, 1, 1}, {1, 2, 3}, {0, 3, 2}, {0, 4, 10}, {3, 1, 1}, {1, 4, 3}}, 2, 1, 1));
+        System.out.println(findCheapestPrice2(5, new int[][]{{4, 1, 1}, {1, 2, 3}, {0, 3, 2}, {0, 4, 10}, {3, 1, 1}, {1, 4, 3}}, 2, 1, 1));
     }
 }

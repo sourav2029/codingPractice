@@ -2,7 +2,7 @@ package com.sourav.leetcode.easy;
 
 import org.junit.jupiter.api.Test;
 
-import static com.sourav.leetcode.easy.easy.DefangingAnIpAddress.defangIPaddr;
+import static com.sourav.leetcode.easy.DefangingAnIpAddress.defangIPaddr;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class DefangingAnIpAddressTest {

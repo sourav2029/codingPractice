@@ -1,9 +1,8 @@
 package com.sourav.arrayandstring;
 
 import java.util.Arrays;
-import java.util.Map;
 
-public class MeetingRooms {
+public class MeetingRooms2 {
     public static class Meeting implements Comparable<Meeting> {
         int time;
         boolean isStart;

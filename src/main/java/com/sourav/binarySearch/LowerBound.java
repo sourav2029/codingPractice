@@ -18,4 +18,15 @@ public class LowerBound {
         }
         return res;
     }
+
+
+//    public int lowerBound(int[] arr, int target){
+//        int st = 0;
+//        int end = arr.length-1;
+//        int res = -1;
+//        while(st <= end){
+//            int mid = st + (end - st)/2;
+//
+//        }
+//    }
 }

@@ -1,4 +1,4 @@
-package com.sourav.leetcode.easy.easy;
+package com.sourav.leetcode.easy;
 
 import javax.print.attribute.standard.MediaPrintableArea;
 import java.util.HashMap;

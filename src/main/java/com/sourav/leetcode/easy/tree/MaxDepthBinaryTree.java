@@ -1,4 +1,4 @@
-package com.sourav.leetcode.easy.easy.tree;
+package com.sourav.leetcode.easy.tree;
 
 //https://leetcode.com/problems/maximum-depth-of-binary-tree/
 public class MaxDepthBinaryTree {

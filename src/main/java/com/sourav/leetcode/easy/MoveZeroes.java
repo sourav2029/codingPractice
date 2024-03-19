@@ -1,4 +1,4 @@
-package com.sourav.leetcode.easy.easy;
+package com.sourav.leetcode.easy;
 
 public class MoveZeroes {
     public void moveZeroes(int[] nums) {

@@ -1,4 +1,4 @@
-package com.sourav.unionfind;
+package com.sourav.graph.unionfind;
 
 public class ConnectedComponents {
     int[] parent;

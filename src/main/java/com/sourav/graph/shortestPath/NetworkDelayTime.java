@@ -1,4 +1,4 @@
-package com.sourav.graph.dijkstras;
+package com.sourav.graph.shortestPath;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,8 +7,6 @@ import java.util.PriorityQueue;
 
 // Dijaksta Algorithm to implement
 public class NetworkDelayTime {
-
-    record Cell(int i, int w, int k) {}
 
     public int networkDelayTime(int[][] times, int n, int k) {
         List<Pair>[] list = new List[n + 1];

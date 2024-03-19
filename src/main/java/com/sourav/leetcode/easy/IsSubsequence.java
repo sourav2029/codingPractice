@@ -1,4 +1,4 @@
-package com.sourav.leetcode.easy.easy;
+package com.sourav.leetcode.easy;
 
 public class IsSubsequence {
     public boolean isSubsequence(String s, String t) {

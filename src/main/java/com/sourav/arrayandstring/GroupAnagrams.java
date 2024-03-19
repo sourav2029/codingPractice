@@ -1,9 +1,6 @@
 package com.sourav.arrayandstring;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 //https://leetcode.com/problems/group-anagrams/
 public class GroupAnagrams {
@@ -35,5 +32,17 @@ public class GroupAnagrams {
         }
         String res = String.valueOf(arr);
         return res;
+    }
+
+
+    public List<List<String>> groupAnagrams2(String[] strs) {
+        Map<String, List<String>> map = new HashMap<>();
+        for(String str : strs){
+            char[] arr = str.toCharArray();
+            Arrays.sort(arr);
+            String key = new String(arr);
+            map.computeIfAbsent(key, k -> new ArrayList<>()).add(str);
+        }
+        return new ArrayList<>(map.values());
     }
 }

@@ -1,4 +1,4 @@
-package com.sourav.leetcode.easy.easy.tree;
+package com.sourav.arrayandstring;
 
 import java.util.*;
 

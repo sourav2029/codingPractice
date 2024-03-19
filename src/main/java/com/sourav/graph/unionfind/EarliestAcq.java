@@ -1,7 +1,8 @@
-package com.sourav.unionfind;
+package com.sourav.graph.unionfind;
 
 import java.util.Arrays;
 
+//https://leetcode.com/problems/the-earliest-moment-when-everyone-become-friends/description/
 public class EarliestAcq {
     static int[] parent, rank;
 

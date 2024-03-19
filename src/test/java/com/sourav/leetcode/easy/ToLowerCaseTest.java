@@ -2,7 +2,7 @@ package com.sourav.leetcode.easy;
 
 import org.junit.jupiter.api.Test;
 
-import static com.sourav.leetcode.easy.easy.ToLowerCase.toLowerCase;
+import static com.sourav.leetcode.easy.ToLowerCase.toLowerCase;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ToLowerCaseTest {
