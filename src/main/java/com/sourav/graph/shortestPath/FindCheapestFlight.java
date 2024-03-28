@@ -65,7 +65,7 @@ public class FindCheapestFlight {
 
     //    Dijakstra Algorithm
     public  int findCheapestPrice3(int n, int[][] flights, int src, int dst, int k) {
-        List<Pair>[] graph = createGraph(n,flights);
+        List<Pair>[] graph = createWeightedGraph(n,flights);
         int[] stops = new int[n];
         Arrays.fill(stops, Integer.MAX_VALUE);
         PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a[0]));
@@ -90,7 +90,7 @@ public class FindCheapestFlight {
     }
 
 
-    public List<Pair>[] createGraph(int n, int[][] edges) {
+    public List<Pair>[] createWeightedGraph(int n, int[][] edges) {
         List<Pair>[] g = new List[n];
         for (int i = 0; i < n; i++) {
             g[i] = new ArrayList<>();
