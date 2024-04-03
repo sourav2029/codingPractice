@@ -25,6 +25,7 @@ public class ConcertTicket {
         }
     }
 
+
     static class InputReader {
         BufferedReader reader;
         StringTokenizer tokenizer;
