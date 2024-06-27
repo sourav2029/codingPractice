@@ -1,8 +1,9 @@
 package com.sourav.leetcode.easy.tree;
 
+import com.sourav.leetcode.tree.TreeNode;
 import org.junit.jupiter.api.Test;
 
-import static com.sourav.leetcode.easy.tree.RangeSumOfBst.rangeSumBST;
+import static com.sourav.leetcode.tree.RangeSumOfBst.rangeSumBST;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class RangeSumOfBstTest {

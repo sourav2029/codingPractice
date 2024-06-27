@@ -13,7 +13,6 @@ public class SmallestSubsequence {
         StringBuilder ans = new StringBuilder();
         boolean[] visited = new boolean[26];
         Stack<Character> stack = new Stack<>();
-
         for (char ch : s.toCharArray()) {
             while (!visited[ch-'a'] && !stack.isEmpty() && stack.peek() > ch && freq[stack.peek() - 'a'] > 0) {
                 char top = stack.pop();

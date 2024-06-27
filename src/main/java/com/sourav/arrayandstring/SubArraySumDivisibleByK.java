@@ -1,5 +1,6 @@
 package com.sourav.arrayandstring;
 
+
 //https://leetcode.com/problems/subarray-sums-divisible-by-k/
 public class SubArraySumDivisibleByK {
     public static int subarraysDivByK(int[] nums, int k) {
@@ -17,8 +18,10 @@ public class SubArraySumDivisibleByK {
     }
 
     public static void main(String[] args) {
-        System.out.println(subarraysDivByK(new int[]{-1,-9,-4,0}, 9));
+//        System.out.println(subarraysDivByK(new int[]{-1,-9,-4,0}, 9));
+        System.out.println(subarraysDivByK(new int[]{7,4,-10}, 5));
     }
+
 
 }
 

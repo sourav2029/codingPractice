@@ -1,4 +1,4 @@
-package com.sourav.leetcode.easy.tree;
+package com.sourav.leetcode.tree;
 
 //https://leetcode.com/problems/invert-binary-tree/
 public class InvertBinaryTree {

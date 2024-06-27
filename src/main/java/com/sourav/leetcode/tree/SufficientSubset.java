@@ -1,4 +1,4 @@
-package com.sourav.leetcode.easy.tree;
+package com.sourav.leetcode.tree;
 
 public class SufficientSubset {
 

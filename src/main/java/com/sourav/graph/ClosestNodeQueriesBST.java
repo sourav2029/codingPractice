@@ -1,6 +1,6 @@
 package com.sourav.graph;
 
-import com.sourav.leetcode.easy.tree.TreeNode;
+import com.sourav.leetcode.tree.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.sourav.leetcode.easy.tree;
+package com.sourav.leetcode.tree;
 
 //https://leetcode.com/problems/find-a-corresponding-node-of-a-binary-tree-in-a-clone-of-that-tree/
 public class GetTargetCopy {
